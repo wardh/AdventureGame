@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
     void AttackInput()
     {
-        bool attack = Input.GetKeyDown(KeyCode.Joystick1Button2);
+        bool attack = Input.GetKeyDown(KeyCode.Joystick1Button0);
         if (attack && myAnimator.GetBool("IsAttacking") == false)
         {
             myAnimator.SetBool("IsAttacking", true);
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
     void RollInput()
     {
-        bool roll = Input.GetKeyDown(KeyCode.Joystick1Button0);
+        bool roll = Input.GetKeyDown(KeyCode.Joystick1Button1);
         if (roll && myAnimator.GetBool("IsAttacking") == false && myRollLockDeltaTime <= 0)
         {
             if (myMovementThisFrame != Vector3.zero)
